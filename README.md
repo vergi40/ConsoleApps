@@ -35,3 +35,20 @@ Options:
   --tfm|--target-framework <string?>    Filter result to e.g. only contain "net8" projects. (Default: null)
   -v|--verbose                           (Optional)
 ```
+
+Example: Print relative project paths
+```
+$ ./CsUtils.exe print "C:\Git\temp\ExampleRepo\ExampleRepo.sln" --type RelativePath
+ConsoleApp\ConsoleApp.csproj
+Library1\Library1.csproj
+Library2\Library2.csproj
+TestProject1\ConsoleApp.Tests.csproj
+TestProject2\Library1.Test.csproj
+```
+
+Example: Print test project names
+```
+$ ./CsUtils.exe print "C:\Git\temp\ExampleRepo\ExampleRepo.sln" --type Name --tests
+ConsoleApp.Tests
+Library1.Test
+```
